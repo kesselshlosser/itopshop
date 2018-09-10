@@ -1,14 +1,9 @@
 require 'yaml'
 require 'fileutils'
 
-required_plugins = %w( vagrant-hostmanager vagrant-vbguest )
-required_plugins.each do |plugin|
-    exec "vagrant plugin install #{plugin}" unless Vagrant.has_plugin? plugin
-end
-
 domains = {
-  frontend: 'itopshop.test',
-  backend:  'backend.itopshop.test',
+  frontend: 'itopshop.dev',
+  backend:  'backend.itopshop.dev',
   api:      'api.itopshop.dev',
   static:   'static.itopshop.dev'
 }
